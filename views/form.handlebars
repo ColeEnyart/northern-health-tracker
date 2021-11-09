@@ -1,0 +1,60 @@
+<section class="header-section">
+  <div>Health Tracker</div>
+</section>
+<section class="main-container">
+      <div class="container-lg">
+        <div class="table-responsive">
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                <div class="col-sm-8"><h2>Track Your Health</h2></div>
+                  <div class="col-sm-4">
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                  </div>
+              </div>
+            </div>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Calorie Count</th>
+                <th>Exercise</th>
+                <th>Sleep</th>
+                <th>Water</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each logs}}
+              <tr>
+                <td>{{day}}</td>
+                <td>{{calorie}}</td>
+                <td>{{exercise}}</td>
+                <td>{{sleep}}</td>
+                <td>{{water}}</td>
+                <td>
+                  <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                  <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+              {{/each}}
+              <tr class="inputs">
+                <td><input class="form-input form-control" type="date" id="day" title="Day of"></td>
+                <td><input class="form-input form-control" type="number" id="calorie"title="Calorie Intake"></td>
+                <td><input class="form-input form-control" type="number" id="exercise" title="Steps Taken"></td>
+                <td><input class="form-input form-control" type="number" id="sleep" title="Hours of sleep the night before"></td>
+                <td><input class="form-input form-control" type="number" id="water" title="Glasses of water drank"></td>
+                <td>
+                    <a class="save" title="Save" data-toggle="tooltip"><i class="material-icons">&#xe145;</i></a>
+                    <a class="cancel" title="Cancel" data-toggle="tooltip"><i class="material-icons">&#xe5c9;</i></a>
+                </td>
+              </tr>  
+            </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+      <script src="/js/form.js"></script> 
+  </body>
+</html>
