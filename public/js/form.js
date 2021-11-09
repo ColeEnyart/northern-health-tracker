@@ -79,7 +79,6 @@ $(document).ready(function () {
       headers: {"Content-Type": "application/json"},
     };
     const res = await fetch(`/api/form/${date}`, options);
-    console.log("After fetch");
 
     if (!res.ok) {
       throw new Error(`Failed to update day {status: ${res.status}, text: "${res.statusText}"`);
@@ -130,7 +129,6 @@ $(document).ready(function () {
   // new record -- cancel
   $(document).on("click", ".cancel", function () {
     const original = $inputs.data("original");
-    console.log(original);
     
     if (original) {
       insert(original);
