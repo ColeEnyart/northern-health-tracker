@@ -758,6 +758,11 @@ tr.inputs input:focus {
     display: flex;
     flex-direction: row;
   }
+  
+  .home-page-title {
+    width: 100%;
+    justify-content: center;
+  }
    
 }
 
